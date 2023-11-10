@@ -2,8 +2,8 @@
 
 #### ŁT - Łacinka Tradycyjnaja
 #### LA - Łacinka Aficyjnaja
-#### KK - Kirylica Tradycyjnaja
-#### KA - Kirylica Aficyjnaja
+#### KK - Kiryličny Klasyčny (pravapis)
+#### KA - Kiryličny Aficyjny (pravapis)
 
 Dadzieny prajekt moža vykarystoŭvacca abo jak zaležnaść u inšych prajektach, abo jak samastojny jar-fajł. Kab atrymać hety
 fajł dastatkova vykanać kamandy Maven
@@ -18,7 +18,7 @@ Prykład kamandy dla lakalnaha zapusku atrymanaha jar-fajła:
 <br />
 Arhumentaŭ pavinna być 4:
 
-pravapis u fajle, jaki budzie kanvertavacca (ŁT, LA, KT, KA)<br />
-šlach da fajła, jaki budzie kanvertavacca<br />
-pravapis novaha fajła (ŁT, LA, KT, KA)<br />
-šlach da novaha fajła
+- pravapis u fajle, jaki budzie kanvertavacca (ŁT, LA, KK, KA)<br />
+- šlach da fajła, jaki budzie kanvertavacca<br />
+- pravapis novaha fajła (ŁT, LA, KK, KA)<br />
+- šlach da novaha fajła
