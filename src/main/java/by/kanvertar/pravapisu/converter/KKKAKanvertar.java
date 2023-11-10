@@ -1,18 +1,17 @@
-package by.kanvertar.pravapisu.converter.k;
+package by.kanvertar.pravapisu.converter;
 
 
-import by.kanvertar.pravapisu.converter.k.constant.DvajnyMiakki;
-import by.kanvertar.pravapisu.converter.k.constant.ZmiakcajemyZycny;
-import by.kanvertar.pravapisu.converter.k.constant.Zmiakchatel;
-import by.kanvertar.pravapisu.converter.k.constant.replace.EndReplace;
-import by.kanvertar.pravapisu.converter.k.constant.replace.StartReplace;
-import by.kanvertar.pravapisu.converter.k.constant.replace.ŠablonnajaZamiena;
+import by.kanvertar.pravapisu.converter.constant.DvajnyMiakki;
+import by.kanvertar.pravapisu.converter.constant.ZmiakcajemyZycny;
+import by.kanvertar.pravapisu.converter.constant.Zmiakchatel;
+import by.kanvertar.pravapisu.converter.constant.replace.EndReplace;
+import by.kanvertar.pravapisu.converter.constant.replace.StartReplace;
+import by.kanvertar.pravapisu.converter.constant.replace.ŠablonnajaZamiena;
 import by.kanvertar.pravapisu.util.ParaZamieny;
 import by.kanvertar.pravapisu.util.StringUtilCheck;
 import by.kanvertar.pravapisu.util.StringUtilGet;
 import by.kanvertar.pravapisu.util.WordCase;
-import by.kanvertar.pravapisu.converter.BazavyKanvertar;
-import by.kanvertar.pravapisu.converter.k.constant.MiakkajaPara;
+import by.kanvertar.pravapisu.converter.constant.MiakkajaPara;
 import by.kanvertar.pravapisu.parser.PraanalizavanyElement;
 import by.kanvertar.pravapisu.parser.Analizatar;
 
@@ -22,11 +21,11 @@ import static by.kanvertar.pravapisu.util.StringUtilCheck.isHalosny;
 import static by.kanvertar.pravapisu.util.StringUtilTransform.transformCase;
 
 
-public class KAKanvertar extends BazavyKanvertar {
+public class KKKAKanvertar extends BazavyKanvertar {
 
     private Analizatar analizatar;
 
-    public KAKanvertar() {
+    public KKKAKanvertar() {
         this.analizatar = new Analizatar();
     }
 

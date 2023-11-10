@@ -1,8 +1,7 @@
 package by.kanvertar.pravapisu;
 
-import by.kanvertar.pravapisu.converter.BazavyKanvertar;
-import by.kanvertar.pravapisu.converter.k.KAKTKanvertar;
-import by.kanvertar.pravapisu.converter.l.ALKanvertar;
+import by.kanvertar.pravapisu.converter.*;
+import by.kanvertar.pravapisu.pamylki.PamylkaVybaryPravapisu;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -13,19 +12,31 @@ import java.nio.file.Paths;
 
 public class Zapusk {
 
-    public static void main(String[] args) throws IOException {
+    /**
+     * ŁT - Łacinka Tradycyjnaja
+     * LA - Łacinka Aficyjnaja
+     * KK - Kiryličny Klasyčny (pravapis)
+     * KA - Kiryličny Aficyjny (pravapis)
+     * <p>
+     * Šach kanvertacyi (musić pracavać u abodva baki)
+     * <p>
+     * ŁT <--> KK <--> KA <--> LA
+     */
+
+
+    public static void main(String[] args) throws IOException, PamylkaVybaryPravapisu {
         if (args.length != 4) {
             System.out.println("Niapravilnaja kolkaść arhumentaŭ. Ich pavinna być 4:");
-            System.out.println("- pravapis u fajle, jaki budzie kanvertavacca (ŁT, ŁA, KT, KA)");
+            System.out.println("- pravapis u fajle, jaki budzie kanvertavacca (ŁT, LA, KK, KA)");
             System.out.println("  ŁT - Łacinka Tradycyjnaja");
             System.out.println("  LA - Łacinka Aficyjnaja");
-            System.out.println("  KK - Kirylica Klasyčnaja");
-            System.out.println("  KA - Kirylica Aficyjnaja");
+            System.out.println("  KK - Kiryličny Klasyčny (pravapis)");
+            System.out.println("  KA - Kirylica Aficyjny (pravapis)");
             System.out.println("- šlach da txt-fajła, jaki budzie kanvertavacca");
-            System.out.println("- pravapis novaha fajła (ŁT, ŁA, KT, KA)");
+            System.out.println("- pravapis novaha fajła (ŁT, LA, KK, KA)");
             System.out.println("- šlach da  novaha fajła");
             System.out.println("\nprykład:");
-            System.out.println("java -jar converter.jar KA 1 ŁT 2\n");
+            System.out.println("java -jar converter.jar KA krynica.txt ŁT vynik.txt\n");
         } else {
             String inputStyle = args[0];
             String inputPath = args[1];
@@ -39,7 +50,7 @@ public class Zapusk {
             String inputStyle,
             String inputPath,
             String outputStyle,
-            String outputPath) throws IOException {
+            String outputPath) throws IOException, PamylkaVybaryPravapisu {
         if (!validStyle(inputStyle)) {
             System.out.println("Niapravilny styl uvachodnaha fajła.");
         } else if (!validStyle(outputStyle)) {
@@ -71,18 +82,27 @@ public class Zapusk {
 
     static boolean validStyle(String style) {
         return style.equalsIgnoreCase("ŁT")
-                || style.equalsIgnoreCase("ŁA")
-                || style.equalsIgnoreCase("KT")
+                || style.equalsIgnoreCase("LA")
+                || style.equalsIgnoreCase("KK")
                 || style.equalsIgnoreCase("KA");
     }
 
-    static BazavyKanvertar getConverterByStyles(String inputStyle, String outputStyle) {
-        if (inputStyle.equalsIgnoreCase("KA") && outputStyle.equalsIgnoreCase("KT")) {
-            return new KAKTKanvertar();
-        } else if (inputStyle.equalsIgnoreCase("KA") && outputStyle.equalsIgnoreCase("ŁT")) {
-            return new ALKanvertar();
-        } else {
-            return new BazavyKanvertar();
+    public static boolean hetaValidnyKodPravapisy(String kodPravapisy) {
+        for (VidKanvertacyi c : VidKanvertacyi.values()) {
+            if (c.name().equals(kodPravapisy)) {
+                return true;
+            }
         }
+        return false;
+    }
+
+    static BazavyKanvertar getConverterByStyles(String inputStyle, String outputStyle) throws PamylkaVybaryPravapisu {
+        if (inputStyle.length() != 2
+                || outputStyle.length() != 2
+                || !hetaValidnyKodPravapisy(inputStyle + outputStyle)) {
+            throw new PamylkaVybaryPravapisu();
+        }
+
+        return VidKanvertacyi.valueOf(inputStyle + outputStyle).kanvertar;
     }
 }

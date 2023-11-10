@@ -1,7 +1,7 @@
 ## Kanvertar dla pravapisaŭ biełaruskaj movy
 
 #### ŁT - Łacinka Tradycyjnaja
-#### ŁA - Łacinka Aficyjnaja
+#### LA - Łacinka Aficyjnaja
 #### KK - Kirylica Tradycyjnaja
 #### KA - Kirylica Aficyjnaja
 
@@ -18,7 +18,7 @@ Prykład kamandy dla lakalnaha zapusku atrymanaha jar-fajła:
 <br />
 Arhumentaŭ pavinna być 4:
 
-pravapis u fajle, jaki budzie kanvertavacca (ŁT, ŁA, KT, KA)<br />
-šlach da txt-fajła, jaki budzie kanvertavacca<br />
-pravapis novaha fajła (ŁT, ŁA, KT, KA)<br />
+pravapis u fajle, jaki budzie kanvertavacca (ŁT, LA, KT, KA)<br />
+šlach da fajła, jaki budzie kanvertavacca<br />
+pravapis novaha fajła (ŁT, LA, KT, KA)<br />
 šlach da novaha fajła

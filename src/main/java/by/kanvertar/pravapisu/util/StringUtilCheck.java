@@ -33,8 +33,19 @@ public class StringUtilCheck {
         return matcher.matches();
     }
 
+    public static boolean hetaKiryličnajeSłoava(String word) {
+        String nonDelimiterPattern = "[а-яА-Я]+";
+        Pattern pattern = Pattern.compile(nonDelimiterPattern);
+        Matcher matcher = pattern.matcher(word);
+        return matcher.matches();
+    }
+
     public static boolean isEngSymbol(char symbol) {
         return isEngWord("" + symbol);
+    }
+
+    public static boolean hetaKiryličnySymbal(char symbol) {
+        return Character.UnicodeBlock.of(symbol).equals(Character.UnicodeBlock.CYRILLIC);
     }
 
     public static boolean isNumber(String symbol) {

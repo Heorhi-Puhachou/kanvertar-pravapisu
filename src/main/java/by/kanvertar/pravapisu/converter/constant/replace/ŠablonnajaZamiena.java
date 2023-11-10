@@ -1,4 +1,4 @@
-package by.kanvertar.pravapisu.converter.k.constant.replace;
+package by.kanvertar.pravapisu.converter.constant.replace;
 
 import by.kanvertar.pravapisu.util.ParaZamieny;
 

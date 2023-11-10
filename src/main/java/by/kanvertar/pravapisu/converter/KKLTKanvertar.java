@@ -1,9 +1,8 @@
-package by.kanvertar.pravapisu.converter.l;
+package by.kanvertar.pravapisu.converter;
 
 
 import by.kanvertar.pravapisu.util.StringUtilCheck;
 import by.kanvertar.pravapisu.util.StringUtilGet;
-import by.kanvertar.pravapisu.converter.BazavyKanvertar;
 import by.kanvertar.pravapisu.parser.PraanalizavanyElement;
 import by.kanvertar.pravapisu.parser.Analizatar;
 
@@ -13,14 +12,14 @@ import java.util.Map;
 
 import static by.kanvertar.pravapisu.util.StringUtilTransform.transformCase;
 
-public class KLKanvertar extends BazavyKanvertar {
+public class KKLTKanvertar extends BazavyKanvertar {
 
     private final Analizatar parser;
     private final HashMap<String, String> pairs;
     private final HashMap<String, String> paraMiakkaści;
     private final HashMap<String, String> pairsL;
 
-    public KLKanvertar() {
+    public KKLTKanvertar() {
 
         this.parser = new Analizatar();
         pairs = new HashMap<>();

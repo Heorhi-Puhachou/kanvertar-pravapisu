@@ -1,11 +1,11 @@
-import by.kanvertar.pravapisu.converter.l.KLKanvertar;
+import by.kanvertar.pravapisu.converter.KKLTKanvertar;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class KLKanvertarTest {
+public class KTLTKanvertarTest {
 
-    private static final KLKanvertar kanvertar = new KLKanvertar();
+    private static final KKLTKanvertar kanvertar = new KKLTKanvertar();
 
     @Test
     public void test() {

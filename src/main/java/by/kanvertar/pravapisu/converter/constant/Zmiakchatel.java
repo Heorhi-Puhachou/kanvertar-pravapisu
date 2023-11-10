@@ -1,4 +1,4 @@
-package by.kanvertar.pravapisu.converter.k.constant;
+package by.kanvertar.pravapisu.converter.constant;
 
 import java.util.ArrayList;
 
