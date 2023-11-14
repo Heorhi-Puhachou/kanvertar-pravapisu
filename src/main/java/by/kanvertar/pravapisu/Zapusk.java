@@ -5,7 +5,6 @@ import by.kanvertar.pravapisu.pamylki.PamylkaVybaryPravapisu;
 
 import java.io.FileWriter;
 import java.io.IOException;
-import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -18,7 +17,7 @@ public class Zapusk {
      * KK - Kiryličny Klasyčny (pravapis)
      * KA - Kiryličny Aficyjny (pravapis)
      * <p>
-     * Šach kanvertacyi (musić pracavać u abodva baki)
+     * Šlach kanvertacyi (musić pracavać u abodva baki)
      * <p>
      * ŁT <--> KK <--> KA <--> LA
      */
@@ -61,9 +60,9 @@ public class Zapusk {
         }
     }
 
-    static String readFile(String path, Charset encoding) throws IOException {
+    static String readFile(String path) throws IOException {
         byte[] encoded = Files.readAllBytes(Paths.get(path));
-        return new String(encoded, encoding);
+        return new String(encoded, StandardCharsets.UTF_8);
     }
 
     static void writeToFile(String output, String path) throws IOException {
@@ -73,7 +72,7 @@ public class Zapusk {
     }
 
     static void convertToFile(String inputPath, String outputPath, BazavyKanvertar converter) throws IOException {
-        String input = readFile(inputPath, StandardCharsets.UTF_8);
+        String input = readFile(inputPath);
         System.out.println(input);
         String output = converter.kanvertavać(input);
         System.out.println(output);

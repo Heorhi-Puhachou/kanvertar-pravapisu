@@ -11,12 +11,12 @@ import java.util.Map;
 
 import static by.kanvertar.pravapisu.util.StringUtilTransform.transformCase;
 
-public class LTKKKanvertar extends BazavyKanvertar {
+public class LAKAKanvertar extends BazavyKanvertar {
     private final Analizatar parser;
     private final HashMap<String, String> pairs;
     private final HashMap<String, String> pairsL;
 
-    public LTKKKanvertar() {
+    public LAKAKanvertar() {
 
         this.parser = new Analizatar();
         pairs = new HashMap<>();
@@ -32,7 +32,7 @@ public class LTKKKanvertar extends BazavyKanvertar {
         pairs.put("i", "і");
         pairs.put("j", "й");
         pairs.put("k", "к");
-        pairs.put("ł", "л");
+        pairs.put("l", "л");
         pairs.put("m", "м");
         pairs.put("n", "н");
         pairs.put("o", "о");
@@ -53,18 +53,14 @@ public class LTKKKanvertar extends BazavyKanvertar {
         pairs.put("ju", "ю");
         pairs.put("ja", "я");
         pairs.put("ie", "е");
-        pairs.put("l", "ль");
+        pairs.put("ĺ", "ль");
         pairs.put("ń", "нь");
         pairs.put("ć", "ць");
         pairs.put("ś", "сь");
         pairs.put("ź", "зь");
 
-
         pairsL = new HashMap<>();
-        pairsL.put("la", "łia");
-        pairsL.put("le", "łie");
-        pairsL.put("lo", "łio");
-        pairsL.put("lu", "łiu");
+        pairsL.put("ĺ", "ль");
         pairsL.put("ie", "е");
         pairsL.put("iu", "ю");
         pairsL.put("io", "ё");

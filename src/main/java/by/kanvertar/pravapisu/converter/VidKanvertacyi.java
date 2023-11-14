@@ -6,7 +6,7 @@ package by.kanvertar.pravapisu.converter;
  * KK - Kiryličny Klasyčny (pravapis)
  * KA - Kiryličny Aficyjny (pravapis)
  * <p>
- * Šach kanvertacyi (musić pracavać u abodva baki)
+ * Šlach kanvertacyi (musić pracavać u abodva baki)
  * <p>
  * ŁT <--> KK <--> KA <--> LA
  */
@@ -23,13 +23,13 @@ public enum VidKanvertacyi {
     LTKK(new LTKKKanvertar()), // łacinka tradycyjnaja -> kiryličny klasyčny
     LTKA(new LTKAKanvertar()), // łacinka tradycyjnaja -> kiryličny aficyjny
 
-    LALT(new BazavyKanvertar()), // łacinka aficyjnaja -> łacinka tradycyjnaja
-    LAKK(new BazavyKanvertar()), // łacinka aficyjnaja -> kiryličny klasyčny
-    LAKA(new BazavyKanvertar()); // łacinka aficyjnaja -> kiryličny aficyjny
+    LALT(new LALTKanvertar()), // łacinka aficyjnaja -> łacinka tradycyjnaja
+    LAKK(new LAKKKanvertar()), // łacinka aficyjnaja -> kiryličny klasyčny
+    LAKA(new LAKAKanvertar()); // łacinka aficyjnaja -> kiryličny aficyjny
 
     public final BazavyKanvertar kanvertar;
 
-    private VidKanvertacyi(BazavyKanvertar kanvertar) {
+    VidKanvertacyi(BazavyKanvertar kanvertar) {
         this.kanvertar = kanvertar;
     }
 }

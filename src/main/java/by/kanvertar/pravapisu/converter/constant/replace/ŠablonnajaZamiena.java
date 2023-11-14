@@ -15,7 +15,6 @@ public class ŠablonnajaZamiena {
         this.dummyReplace = new ArrayList<>();
         dummyReplace.add(new ParaZamieny("амерык", "амэрык"));
         dummyReplace.add(new ParaZamieny("анверт", "анвэрт"));
-        dummyReplace.add(new ParaZamieny("аргумент", "аргумэнт"));
         dummyReplace.add(new ParaZamieny("артапед", "артапэд"));
         dummyReplace.add(new ParaZamieny("аспект", "аспэкт"));
         dummyReplace.add(new ParaZamieny("арфаграф", "артаграф"));
@@ -29,11 +28,11 @@ public class ŠablonnajaZamiena {
         dummyReplace.add(new ParaZamieny("глам", "глям"));
         dummyReplace.add(new ParaZamieny("гласар", "глясар"));
         dummyReplace.add(new ParaZamieny("візіт", "візыт"));
-        dummyReplace.add(new ParaZamieny("дакумент", "дакумэнт"));
+        dummyReplace.add(new ParaZamieny("каментарый", "камэнтар"));
+        dummyReplace.add(new ParaZamieny("мент", "мэнт"));
         dummyReplace.add(new ParaZamieny("донья", "доньня"));
         dummyReplace.add(new ParaZamieny("еўр", "эўр"));
         dummyReplace.add(new ParaZamieny("іерогліф", "герогліф"));
-        dummyReplace.add(new ParaZamieny("каментарый", "камэнтар"));
         dummyReplace.add(new ParaZamieny("каталог", "каталёг"));
         dummyReplace.add(new ParaZamieny("класіч", "клясыч"));
         dummyReplace.add(new ParaZamieny("клуб", "клюб"));
@@ -64,8 +63,7 @@ public class ŠablonnajaZamiena {
         dummyReplace.add(new ParaZamieny("фунікулёр", "фунікулер"));
         dummyReplace.add(new ParaZamieny("фальклор", "фальклёр"));
         dummyReplace.add(new ParaZamieny("шоу", "шоў"));
-        dummyReplace.add(new ParaZamieny("элемент", "элемэнт"));
-        dummyReplace.add(new ParaZamieny("эфект", "эфэкт"));
+        dummyReplace.add(new ParaZamieny("фект", "фэкт"));
     }
 
     public static ŠablonnajaZamiena getInstance() {

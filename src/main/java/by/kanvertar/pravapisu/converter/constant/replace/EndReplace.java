@@ -16,10 +16,6 @@ public class EndReplace {
         endReplace.add(new ParaZamieny("метр", "метар"));
         endReplace.add(new ParaZamieny("літр", "літар"));
 
-        //элемент -> элемэнт
-        //дакумент -> дакумэнт
-        endReplace.add(new ParaZamieny("мент", "мэнт"));
-
         //калегіум - калегіюм
         endReplace.add(new ParaZamieny("іум", "іюм"));
 
